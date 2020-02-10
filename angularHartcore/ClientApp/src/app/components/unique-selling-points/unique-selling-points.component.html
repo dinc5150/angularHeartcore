@@ -1,0 +1,16 @@
+<article class="usp-container">
+  <h1 class="usp-container__title">{{title}}</h1>
+  <div class="usp-item-container">
+  
+    <section class="usp" *ngFor="let usp of contents">
+     
+        <h2 class="usp__title">{{usp.title}}</h2>
+        <img class="usp__image" src="{{usp.image._url}}" alt="">
+        <p class="usp__text">{{usp.text}}</p>
+        <a href="{{usp.link.url}}" target="{{usp.link.target}}" rel="noopener" class="usp__link" *ngIf="usp.link">{{usp.link.name}}</a>
+
+     
+    </section>
+    
+  </div>
+</article>
