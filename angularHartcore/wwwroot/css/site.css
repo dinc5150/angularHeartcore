@@ -108,7 +108,8 @@ a:hover {
 }
 
 .nav__item-link {
-  color: white;
+  color: #333;
+  margin-left:10px;
 }
 
 .nav__item-link--current {
@@ -166,7 +167,13 @@ a:hover {
   .hero__title {
     font-size: 4.2em;
   }
+
+    .nav__item-link {
+        color: #FFF;
+    }
 }
+
+
 
 /* USP */
 

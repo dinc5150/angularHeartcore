@@ -5,7 +5,7 @@
     <section class="usp" *ngFor="let usp of contents">
      
         <h2 class="usp__title">{{usp.title}}</h2>
-        <img class="usp__image" src="{{usp.image._url}}" alt="">
+        <img class="usp__image" src="{{usp.image._url}}" alt="" *ngIf="usp.image">
         <p class="usp__text">{{usp.text}}</p>
         <a href="{{usp.link.url}}" target="{{usp.link.target}}" rel="noopener" class="usp__link" *ngIf="usp.link">{{usp.link.name}}</a>
 
@@ -14,3 +14,4 @@
     
   </div>
 </article>
+

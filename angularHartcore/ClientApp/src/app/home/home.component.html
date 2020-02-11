@@ -5,7 +5,7 @@
 <unique-selling-points [title]="pageData.uniqueSellingPointsTitle" [contents]="pageData.uniqueSellingPoints"></unique-selling-points>
 
 <div *ngFor="let element of pageData.elements">
-  {{element.contentTypeAlias}}
+ 
   <text-and-image *ngIf="element.contentTypeAlias == 'textAndImage'" [model]="element"></text-and-image>
 </div>
 

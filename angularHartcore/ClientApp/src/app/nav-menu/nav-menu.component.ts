@@ -15,9 +15,10 @@ export class NavMenuComponent implements OnInit {
       const headers = new HttpHeaders()
         .set('Content-Type', 'application/json')
         //.set('Accept-Language', 'en-AU')
-        //.set('umb-project-alias', 'davids-intuitive-red-panda');
+       // .set('umb-project-alias', 'davids-intuitive-red-panda')
+        .set('umb-project-alias', 'daves-understanding-wombat')
         .set('Accept-Language', 'en-US')
-        .set('umb-project-alias', 'demo-headless');
+        //.set('umb-project-alias', 'demo-headless');
 
     
       this.http.get('https://cdn.umbraco.io/content/url?url=/', {
@@ -27,14 +28,19 @@ export class NavMenuComponent implements OnInit {
         console.log(data)
 
           this.http.get(data._links.children.href, {
-          headers: headers
-        }).subscribe((children:any) => {
-          console.info(children)
-          this.children = children._embedded.content
-
-
-
+              headers: headers
+            }).subscribe((children:any) => {
+              console.info(children)
+              this.children = children._embedded.content
         });
+
+
+          //this.http.get(data._links.content.href, {
+          //  headers: headers
+          //}).subscribe((children: any) => {
+          //  console.info(children)
+          //  this.children = children._embedded.content
+          //});
 
 
       });

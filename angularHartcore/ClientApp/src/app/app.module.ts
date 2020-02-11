@@ -30,7 +30,7 @@ import { TextAndImageComponent } from './components/text-and-image/text-and-imag
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full', resolve: { pageData: PageResolverService } },
+      { path: '**', component: HomeComponent, resolve: { pageData: PageResolverService } },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
     ])

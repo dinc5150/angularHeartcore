@@ -5,25 +5,26 @@
   </div>
   <!-- Fix image and sizes -->
   <img class="text-and-image__image" srcset="
-                {{model.imageUrl}}?width=320&height=240&mode=crop 320w,
-                {{model.imageUrl}}?width=480&height=360&mode=crop 480w,
-                {{model.imageUrl}}?width=1024px&height=768&mode=crop 1024w"
+                {{model.image._url}}?width=320&height=240&mode=crop 320w,
+                {{model.image._url}}?width=480&height=360&mode=crop 480w,
+                {{model.image._url}}?width=1024px&height=768&mode=crop 1024w"
        sizes="(max-width: 320px) 320px,
                     (max-width: 480px) 480px
                     (max-width: 1024px) 1024px"
-       src="{{model.imageUrl}}?width750&height=515&mode=crop"
+       src="{{model.image._url}}?width750&height=515&mode=crop"
        loading="lazy"
-       alt="" *ngIf="model.showLargeImage && model.imageUrl != null">
+       alt="" *ngIf="model.showLargeImage && model.image != null">
 
   <img class="text-and-image__image" srcset="
-                 {{model.imageUrl}}?width=320&height=240&mode=crop 320w,
-                 {{model.imageUrl}}?width=480&height=360&mode=crop 480w,
-                 {{model.imageUrl}}?width=1024px&height=768&mode=crop 1024w"
+                 {{model.image._url}}?width=320&height=240&mode=crop 320w,
+                 {{model.image._url}}?width=480&height=360&mode=crop 480w,
+                 {{model.image._url}}?width=1024px&height=768&mode=crop 1024w"
        sizes="(max-width: 320px) 320px,
                      (max-width: 480px) 480px
                      (max-width: 1024px) 1024px"
-       src="{{model.imageUrl}}?width=320&height=240&mode=crop"
+       src="{{model.image._url}}?width=320&height=240&mode=crop"
        loading="lazy"
-       alt="" *ngIf="!model.showLargeImage && model.imageUrl != null">
+       alt="" *ngIf="!model.showLargeImage && model.image != null">
  
 </article>
+<!--<pre>{{model|json}}</pre>-->

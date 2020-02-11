@@ -18,11 +18,12 @@ export class PageResolverService implements Resolve<any> {
       .set('Content-Type', 'application/json')
       //.set('Accept-Language', 'en-AU')
       //.set('umb-project-alias', 'davids-intuitive-red-panda');
-      //.set('umb-project-alias', 'daves-understanding-wombat')
+      .set('umb-project-alias', 'daves-understanding-wombat')
       .set('Accept-Language', 'en-US')
-      .set('umb-project-alias', 'demo-headless');
+      //.set('umb-project-alias', 'demo-headless');
 
     console.info("url change", route.url.join("/"))
+
 
     return this.http.get('https://cdn.umbraco.io/content/url?url=/' + route.url.join("/"), {
       headers: headers
